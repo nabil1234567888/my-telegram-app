@@ -2,14 +2,34 @@
 <html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>تطبيقي المصغر</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPlus</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        body { font-family: sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
+        .balance-card { background: linear-gradient(135deg, #333, #555); color: white; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px; }
+        .ad-card { background: white; padding: 20px; border-radius: 15px; border: 1px solid #ddd; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .stats-container { display: flex; gap: 10px; margin-top: 20px; }
+        .stat-box { flex: 1; background: white; padding: 15px; border-radius: 10px; border: 1px solid #ddd; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <h1>أهلاً بك في تطبيقي!</h1>
-    <p>هذه هي الواجهة الأولى للبوت الخاص بي.</p>
+
+    <div class="balance-card">
+        <h3>الرصيد الإجمالي</h3>
+        <h1>$0.00</h1>
+    </div>
+
+    <div class="ad-card">
+        <h3>شاهد واكسب</h3>
+        <p>أكمل وشاهد إعلان فيديو قصير واكسب 0.20$</p>
+        <button>مشاهدة الإعلان</button>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-box">إجمالي الأرباح<br><strong>$14.40</strong></div>
+        <div class="stat-box">إجمالي المشاهدات<br><strong>72</strong></div>
+    </div>
+
 </body>
 </html>
