@@ -6,8 +6,6 @@
         body { font-family: sans-serif; background-color: #f4f4f9; text-align: center; padding: 20px; }
         .balance-card { background: linear-gradient(135deg, #ffd700, #ffaa00); color: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
         .ad-card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .stats-container { display: flex; gap: 10px; margin-top: 20px; }
-        .stat-box { flex: 1; background: white; padding: 15px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         button { background: #007bff; color: white; border: none; padding: 15px 40px; border-radius: 30px; cursor: pointer; font-size: 16px; margin-top: 10px; }
     </style>
 </head>
@@ -24,17 +22,14 @@
         <button id="showAdBtn">مشاهدة الإعلان</button>
     </div>
 
-    <div class="stats-container">
-        <div class="stat-box">إجمالي الأرباح<br>$0.00</div>
-        <div class="stat-box">إجمالي المشاهدات<br>0</div>
-    </div>
-
     <script src="https://sad.adsgram.ai/js/adgram.min.js"></script>
     <script>
         const adController = window.Adsgram.init({ blockId: "bot-35929" });
-        document.getElementById("showAdBtn").addEventListener("click", () => {
+        const btn = document.getElementById("showAdBtn");
+
+        btn.addEventListener("click", () => {
             adController.show().catch((err) => {
-                console.error("خطأ في عرض الإعلان", err);
+                alert("خطأ في عرض الإعلان: " + err);
             });
         });
     </script>
